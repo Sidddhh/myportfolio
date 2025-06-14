@@ -109,16 +109,16 @@ const About = () => {
                 </Card>
               ))}
             </div>
-            <div className="flex flex-row justify-center gap-6 mt-8 flex-nowrap">
+            <div className="flex flex-row justify-center gap-4 mt-8 flex-wrap md:flex-nowrap">
               <img
                 src="https://i.postimg.cc/0jB5dQMj/Screenshot-33.png"
                 alt="Achievement Certificate 1"
-                className="w-full max-w-2xl h-96 object-cover rounded-md opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300 ease-in-out"
+                className="w-full max-w-xs h-64 sm:max-w-md sm:h-80 md:max-w-2xl md:h-96 object-cover rounded-md opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300 ease-in-out"
               />
               <img
                 src="https://i.postimg.cc/W39sT378/Screenshot-2025-06-14-221423-1.png"
                 alt="Achievement Certificate 2"
-                className="w-full max-w-2xl h-96 object-contain rounded-md opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300 ease-in-out"
+                className="w-full max-w-xs h-64 sm:max-w-md sm:h-80 md:max-w-2xl md:h-96 object-contain rounded-md opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300 ease-in-out"
               />
             </div>
           </div>
