@@ -88,7 +88,7 @@ const About = () => {
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {achievements.map((achievement, index) => (
-                <Card key={index} className="glass-card text-center hover:shadow-xl transition-all duration-300 group">
+                <Card key={index} className="glass-card text-center hover:shadow-xl transition-all duration-300 hover:scale-105 group">
                   <CardContent className="p-6">
                     <div className="flex justify-center mb-4 text-primary group-hover:scale-110 transition-transform duration-300">
                       {achievement.icon}
@@ -109,16 +109,16 @@ const About = () => {
                 </Card>
               ))}
             </div>
-            <div className="flex flex-col sm:flex-row justify-center gap-6 mt-8">
+            <div className="flex flex-row justify-center gap-6 mt-8 flex-nowrap">
               <img
                 src="https://i.postimg.cc/0jB5dQMj/Screenshot-33.png"
                 alt="Achievement Certificate 1"
-                className="w-full max-w-sm h-64 object-cover rounded-md opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300 ease-in-out"
+                className="w-full max-w-2xl h-96 object-cover rounded-md opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300 ease-in-out"
               />
               <img
                 src="https://i.postimg.cc/W39sT378/Screenshot-2025-06-14-221423-1.png"
                 alt="Achievement Certificate 2"
-                className="w-full max-w-sm h-64 object-contain rounded-md opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300 ease-in-out"
+                className="w-full max-w-2xl h-96 object-contain rounded-md opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300 ease-in-out"
               />
             </div>
           </div>
