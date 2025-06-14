@@ -7,25 +7,25 @@ const About = () => {
       title: "Topper in State Board SSC",
       description: "Ranked 1 in the Maharashtra State Board SSC Examination (2019-2020).",
       icon: <GraduationCap className="w-6 h-6" />,
-      link: "https://example.com/ssc-achievement" // Replace with actual link to achievement details
+      link: "https://drive.google.com/file/d/1tk1mjgSJcBWV3ZDxuDHoF_uXfZuFdFLw/view?usp=sharing"
     },
     {
       title: "Course Completion at IIT Bombay",
       description: "Successfully got selected for the course through good CGPA",
       icon: <Brain className="w-6 h-6" />,
-      link: "https://example.com/project-achievement" // Replace with actual link to achievement details
+      link: "https://drive.google.com/file/d/1eL2GwE60IY7eBd9SGyoDW2Rjb_A35c7z/view?usp=drive_link"
     },
     {
-      title: "Leadership Award",
-      description: "Awarded for exceptional leadership in organizing a tech fest at Vidyalankar Institute of Technology (2023).",
+      title: "SIH Participation",
+      description: "Award for participation and selected for SIH Hackathon 2023.",
       icon: <Award className="w-6 h-6" />,
-      link: "https://example.com/leadership-achievement" // Replace with actual link to achievement details
+      link: "https://drive.google.com/file/d/1Yt8hTacq6JWH_kxX2axBAt0x2DDq7JnS/view?usp=sharing"
     },
     {
-      title: "Music Composition Award",
-      description: "Received first place in a national music composition contest for creating an original soundtrack, showcasing creativity and technical precision applicable to UI/UX design (2024).",
+      title: "Akhil Bharatiya Gandharv Vidyalay",
+      description: "Achieved 1st grade in playing Pakhawaj at Gandharv",
       icon: <Music className="w-6 h-6" />,
-      link: "https://example.com/music-achievement" // Replace with actual link to achievement details
+      link: "https://drive.google.com/file/d/11a1stba1YVAqFpcotUMn50sDFY-HA_Rx/view?usp=sharing"
     }
   ];
 
@@ -88,7 +88,7 @@ const About = () => {
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {achievements.map((achievement, index) => (
-                <Card key={index} className="glass-card text-center hover:shadow-xl transition-all duration-300 hover:scale-105 group">
+                <Card key={index} className="glass-card text-center hover:shadow-xl transition-all duration-300 group">
                   <CardContent className="p-6">
                     <div className="flex justify-center mb-4 text-primary group-hover:scale-110 transition-transform duration-300">
                       {achievement.icon}
@@ -108,6 +108,18 @@ const About = () => {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+            <div className="flex flex-col sm:flex-row justify-center gap-6 mt-8">
+              <img
+                src="https://i.postimg.cc/0jB5dQMj/Screenshot-33.png"
+                alt="Achievement Certificate 1"
+                className="w-full max-w-sm h-64 object-cover rounded-md opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300 ease-in-out"
+              />
+              <img
+                src="https://i.postimg.cc/W39sT378/Screenshot-2025-06-14-221423-1.png"
+                alt="Achievement Certificate 2"
+                className="w-full max-w-sm h-64 object-contain rounded-md opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300 ease-in-out"
+              />
             </div>
           </div>
         </div>

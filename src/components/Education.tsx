@@ -11,10 +11,10 @@ const Education = () => {
       field: "IT Engineering",
       institution: "Vidyalankar Institute of Technology",
       year: "2022 - Pursuing",
-      description: "CGPA - 9.23",
+      description: "CGPA - 9.56",
       icon: <GraduationCap className="w-6 h-6" />,
       image: "https://images.shiksha.com/mediadata/images/1516603302phpz0SEMq.jpeg",
-      link: "https://example.com/btech-cert" // Replace with actual certificate/mark sheet link
+      link: "https://drive.google.com/file/d/1c8r7NoTE53k17ETDqRj6X45LShLRPUjA/view?usp=sharing" // Replace with actual certificate/mark sheet link
     },
     {
       degree: "Higher Secondary Certificate (HSC) | Science",
@@ -24,7 +24,7 @@ const Education = () => {
       description: "Percentage - 82.50%",
       icon: <GraduationCap className="w-6 h-6" />,
       image: "https://content3.jdmagicbox.com/v2/comp/mumbai/c2/022pxx22.xx22.230701124707.t7c2/catalogue/0wxntq1np6q78h7-kdiw624prd.jpg",
-      link: "https://example.com/hsc-cert" // Replace with actual certificate/mark sheet link
+      link: "https://drive.google.com/file/d/1m2GA8qbkMnCY5UOVy1gMysNqlAhS8tLu/view?usp=sharing" // Replace with actual certificate/mark sheet link
     },
     {
       degree: "Secondary School Certificate (SSC)",
@@ -34,7 +34,7 @@ const Education = () => {
       description: "Percentage - 95.60%",
       icon: <GraduationCap className="w-6 h-6" />,
       image: "https://yt3.googleusercontent.com/C1Hk-rIMoYirtDc2QrHU74albj1Xey-JaAxG-lex15S5bD1nAHmODZQGL0X05hn3O7_YPyTi-g=s900-c-k-c0x00ffffff-no-rj",
-      link: "https://example.com/ssc-cert" // Replace with actual certificate/mark sheet link
+      link: "https://drive.google.com/file/d/1mbXBKhIzBXok317vhwa6e3aiYdcdPArr/view?usp=sharing" // Replace with actual certificate/mark sheet link
     }
   ];
 
@@ -42,10 +42,10 @@ const Education = () => {
     {
       title: "Digital System Design and Verification",
       issuer: "IIT Bombay",
-      year: "2023",
+      year: "2024",
       icon: <Award className="w-5 h-5" />,
       gradient: "from-blue-500 to-cyan-500",
-      link: "https://example.com/cert1"
+      link: "https://drive.google.com/file/d/1eL2GwE60IY7eBd9SGyoDW2Rjb_A35c7z/view?usp=drive_link"
     },
     {
       title: "MATLAB Fundamentals",
@@ -53,23 +53,23 @@ const Education = () => {
       year: "2023",
       icon: <Award className="w-5 h-5" />,
       gradient: "from-orange-500 to-red-500",
-      link: "https://example.com/cert2"
+      link: "https://drive.google.com/file/d/13ryXi4ySHDo7yWQBA46VFz2bdcizeRV4/view?usp=drive_link"
     },
     {
-      title: "Data Structures in C",
-      issuer: "Great Learning",
-      year: "2022",
+      title: "Introduction to Neural Networks",
+      issuer: "Simple Learn",
+      year: "2024",
       icon: <Award className="w-5 h-5" />,
       gradient: "from-green-500 to-emerald-500",
-      link: "https://example.com/cert3"
+      link: "https://drive.google.com/file/d/1RP961h74IrfvkK5xTG24y3Ay3O4WH2oA/view?usp=drive_link"
     },
     {
       title: "Introduction to Soft Skills",
       issuer: "TCS iON",
-      year: "2022",
+      year: "2023",
       icon: <Award className="w-5 h-5" />,
       gradient: "from-purple-500 to-indigo-500",
-      link: "https://example.com/cert4"
+      link: "https://drive.google.com/file/d/14kIb3TY6FHTJHnaySfj_GyISilYGFuss/view?usp=drive_link"
     }
   ];
 
