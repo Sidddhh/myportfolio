@@ -64,11 +64,19 @@ const Education = () => {
       link: "https://drive.google.com/file/d/1RP961h74IrfvkK5xTG24y3Ay3O4WH2oA/view?usp=drive_link"
     },
     {
+      title: "Data Analytics Job Simulation",
+      issuer: "Deloitte via (Forage)",
+      year: "2025",
+      icon: <Award className="w-5 h-5" />,
+      gradient: "from-blue-500 to-pink-500",
+      link: "https://drive.google.com/file/d/1HAjPrIQs_z-iTQ6h0neoooaUCp7U4vtg/view?usp=sharing"
+    },
+    {
       title: "Introduction to Soft Skills",
       issuer: "TCS iON",
       year: "2023",
       icon: <Award className="w-5 h-5" />,
-      gradient: "from-purple-500 to-indigo-500",
+      gradient: "from-red-500 to-yellow-500",
       link: "https://drive.google.com/file/d/14kIb3TY6FHTJHnaySfj_GyISilYGFuss/view?usp=drive_link"
     }
   ];

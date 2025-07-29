@@ -10,7 +10,7 @@ const Footer = () => {
           </div>
           <div className="w-16 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-6 rounded-full"></div>
           <p className="text-muted-foreground">
-            © 2024 Siddhesh Gharat. All rights reserved.
+            © 2025 Siddhesh Gharat. All rights reserved.
           </p>
         </div>
       </div>
