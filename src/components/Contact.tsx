@@ -6,8 +6,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Github, Linkedin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Contact = () => {
+  const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -97,13 +100,13 @@ const Contact = () => {
   ];
 
   return (
-    <section
+    <section ref={sectionRef}
       id="contact"
       className="py-16 bg-gradient-to-br from-background to-muted/10 flex items-center justify-center min-h-[50vh]"
     >
       <div className="section-container">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-10">
+          <div className={`text-center mb-10 ${sectionVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
             <h2 className="text-4xl font-bold mb-4 gradient-text">Get In Touch</h2>
             <p className="text-muted-foreground text-base max-w-xl mx-auto leading-relaxed">
               Let's collaborate and bring your ideas to life

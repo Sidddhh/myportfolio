@@ -1,10 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, Award, Calendar } from "lucide-react";
-
-// Add animate.css CDN in your main index.html or layout file:
-// <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Education = () => {
+  const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
+  
   const education = [
     {
       degree: "Bachelor of Technology",
@@ -74,10 +74,10 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-24">
+    <section id="education" className="py-24" ref={sectionRef}>
       <div className="section-container">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className={`text-center mb-16 ${sectionVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
             <h2 className="text-5xl font-bold mb-6 gradient-text">Education & Certifications</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
               Academic foundation and continuous learning journey
@@ -86,13 +86,17 @@ const Education = () => {
           </div>
           
           {/* Education */}
-          <div className="mb-16">
+          <div className={`mb-16 ${sectionVisible ? 'scroll-visible animate-slide-up-delay-1' : 'scroll-hidden'}`}>
             <h3 className="text-3xl font-semibold mb-8 text-center">Education</h3>
             <div className="max-w-6xl mx-auto">
               {education.map((edu, index) => (
                 <Card 
                   key={index} 
-                  className={`glass-card hover:shadow-xl hover:scale-105 transition-all duration-300 mb-6 animate__animated animate__fadeInUp animate__delay-${index}s`}
+                  className={`glass-card hover:shadow-xl hover:scale-105 transition-all duration-300 mb-6 ${
+                    sectionVisible 
+                      ? `scroll-visible animate-slide-up-delay-${Math.min(index + 2, 5)}` 
+                      : 'scroll-hidden'
+                  }`}
                 >
                   <CardContent className="p-12">
                     <div className="flex flex-col md:flex-row md:items-start space-y-8 md:space-y-0 md:space-x-10">

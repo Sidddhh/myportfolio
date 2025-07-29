@@ -1,7 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Briefcase } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Experience = () => {
+  const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
+  
   const experiences = [
     {
       title: "Web Development Intern",
@@ -14,10 +17,10 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-16 bg-gradient-to-br from-muted/10 to-background flex items-center justify-center min-h-[50vh]">
+    <section id="experience" className="py-16 bg-gradient-to-br from-muted/10 to-background flex items-center justify-center min-h-[50vh]" ref={sectionRef}>
       <div className="section-container">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-10">
+          <div className={`text-center mb-10 ${sectionVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
             <h2 className="text-4xl font-bold mb-4 gradient-text">Work Experience</h2>
             <p className="text-muted-foreground text-base max-w-xl mx-auto leading-relaxed">
               Real-world experience building impactful solutions
@@ -29,7 +32,11 @@ const Experience = () => {
             {experiences.map((exp, index) => (
               <Card 
                 key={index} 
-                className="glass-card hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border-0 overflow-hidden w-full max-w-[90vw] sm:max-w-[400px]"
+                className={`glass-card hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border-0 overflow-hidden w-full max-w-[90vw] sm:max-w-[400px] ${
+                  sectionVisible 
+                    ? `scroll-visible animate-slide-up-delay-${Math.min(index + 1, 4)}` 
+                    : 'scroll-hidden'
+                }`}
               >
                 <CardHeader className="p-6 pb-3">
                   <div className={`w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br ${exp.gradient} flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300`}>

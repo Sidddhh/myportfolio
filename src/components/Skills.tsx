@@ -1,7 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Code, Database, Brain, Globe, Smartphone } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Skills = () => {
+  const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
+  
   const skillCategories = [
     {
       title: "Frontend Development",
@@ -36,10 +39,10 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-16 bg-gradient-to-br from-muted/10 to-background flex items-center justify-center min-h-[50vh]">
+    <section id="skills" className="py-16 bg-gradient-to-br from-muted/10 to-background flex items-center justify-center min-h-[50vh]" ref={sectionRef}>
       <div className="section-container">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-10">
+          <div className={`text-center mb-10 ${sectionVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
             <h2 className="text-4xl font-bold mb-4 gradient-text">Technical Skills</h2>
             <p className="text-muted-foreground text-base max-w-xl mx-auto leading-relaxed">
               A curated toolkit for crafting modern, intelligent applications
@@ -51,7 +54,11 @@ const Skills = () => {
             {skillCategories.map((category, index) => (
               <Card 
                 key={index} 
-                className="glass-card hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border-0 overflow-hidden w-full max-w-[300px]"
+                className={`glass-card hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border-0 overflow-hidden w-full max-w-[300px] ${
+                  sectionVisible 
+                    ? `scroll-visible animate-slide-up-delay-${Math.min(index + 1, 4)}` 
+                    : 'scroll-hidden'
+                }`}
               >
                 <CardContent className="p-4">
                   <div className={`w-12 h-12 mx-auto mb-3 rounded-xl bg-gradient-to-br ${category.gradient} flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300`}>

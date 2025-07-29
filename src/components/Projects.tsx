@@ -2,8 +2,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Projects = () => {
+  const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
+  
   const projects = [
     {
       title: "Brain Tumor Detection",
@@ -40,10 +43,10 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-24">
+    <section id="projects" className="py-24" ref={sectionRef}>
       <div className="section-container">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className={`text-center mb-16 ${sectionVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
             <h2 className="text-5xl font-bold mb-6 gradient-text">Featured Projects</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
               Explore my latest work and innovative solutions
@@ -53,7 +56,14 @@ const Projects = () => {
           
           <div className="grid lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <Card key={index} className="glass-card overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] group border-0">
+              <Card 
+                key={index} 
+                className={`glass-card overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] group border-0 ${
+                  sectionVisible 
+                    ? `scroll-visible animate-slide-up-delay-${Math.min(index + 1, 4)}` 
+                    : 'scroll-hidden'
+                }`}
+              >
                 <div className="relative overflow-hidden">
                   <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-40`} />
                   <img 

@@ -3,22 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Siddhesh_portfolio</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+    <title>Siddhesh Gharat - Portfolio</title>
+    <meta name="description" content="Siddhesh Gharat - Fresher Developer & AI Enthusiast Portfolio" />
+    <meta name="author" content="Siddhesh Gharat" />
 
-    <meta property="og:title" content="sidd-shah-digital-craft" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <meta property="og:title" content="Siddhesh Gharat - Portfolio" />
+    <meta property="og:description" content="Siddhesh Gharat - Fresher Developer & AI Enthusiast Portfolio" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://i.postimg.cc/25MxwTNX/portfolio-logo.png" />
+    <meta property="og:image" content="https://i.postimg.cc/W3RwVwV4/portfolio-logo-modified.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://i.postimg.cc/25MxwTNX/portfolio-logo.png" />
+    <meta name="twitter:site" content="@siddhesh_gharat" />
+    <meta name="twitter:image" content="https://i.postimg.cc/W3RwVwV4/portfolio-logo-modified.png" />
+    
+    <link rel="icon" type="image/png" href="/favicon.png?v=4" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png?v=4" />
+    <link rel="apple-touch-icon" href="/favicon.png?v=4" />
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Force favicon reload
+      const favicon = document.querySelector('link[rel="icon"]');
+      if (favicon) {
+        favicon.href = favicon.href.split('?')[0] + '?v=' + Date.now();
+      }
+    </script>
   </body>
 </html>

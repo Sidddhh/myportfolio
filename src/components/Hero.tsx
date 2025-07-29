@@ -1,4 +1,4 @@
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
@@ -112,13 +112,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div className="flex flex-col items-center gap-2">
-              <span className="text-xs text-muted-foreground font-medium">Scroll Down</span>
-              <ArrowDown size={20} className="text-muted-foreground" />
-            </div>
-          </div>
+
         </div>
       </div>
     </section>
