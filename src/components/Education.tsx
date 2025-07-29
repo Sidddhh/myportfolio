@@ -152,14 +152,16 @@ const Education = () => {
           {/* Certifications */}
           <div>
             <h3 className="text-3xl font-semibold mb-8 text-center">Certifications</h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-6">
               {certifications.map((cert, index) => (
-                <Card 
-                  key={index} 
-                  className={`glass-card text-center hover:shadow-xl transition-all duration-300 hover:scale-105 group animate__animated animate__fadeInUp animate__delay-${index}s`}
+                <Card
+                  key={index}
+                  className={`glass-card w-[280px] text-center hover:shadow-xl transition-all duration-300 hover:scale-105 group animate__animated animate__fadeInUp animate__delay-${index}s`}
                 >
                   <CardContent className="p-6">
-                    <div className={`w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-br ${cert.gradient} flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
+                    <div
+                      className={`w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-br ${cert.gradient} flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}
+                    >
                       {cert.icon}
                     </div>
                     <h4 className="font-semibold mb-3 text-sm leading-tight">{cert.title}</h4>
@@ -182,8 +184,6 @@ const Education = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
-};
+    </section>); };
 
 export default Education;
